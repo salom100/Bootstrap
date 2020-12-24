@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Componentes Carrousel</title>
+
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+
+        <div class="container" style="background-color: gray;">
+            <h1>Carrosel</h1>
+            <!-- carousel-fade = faz uma transição de imagem-->
+            <div id="meu_slideshow" class="carousel slide carousel-fade" data-ride="carousel" style="text-align: center;">
+
+                <!--Indicadores-->
+                <ol class="carousel-indicators">
+                    <li data-target="#meu_slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#meu_slideshow" data-slide-to="1"></li>
+                    <li data-target="#meu_slideshow" data-slide-to="2"></li>
+                </ol>
+
+                <!--Conteudo = imagens-->
+                <div class="carousel-inner">
+                    <!-- Imagem 1-->
+                    <div class="carousel-item active">
+                        <img src="img/natureza1.jpg" alt="Imagem de uma ponte sobre o rio" style="max-height: 500px;">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Natureza 1</h5>
+                            <p>Ponte sobre o rio</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Imagem 2-->
+                    <div class="carousel-item">
+                        <img src="img/natureza2.jpg" alt="Floresta no outono" style="max-height: 500px;">
+
+                        <!-- Dependendo do tamanho da tela as legendas podem atrapalhar
+                            d-md-block = define o tamanho minimo para as legendas aparecerem
+                        -->
+                        <div class="carousel-caption d-none d-md-block"> <!--Legendas-->
+                            <h5>Natureza 2</h5> <!-- titulo Visivel-->
+                            <p>Tarde de outono</p> <!-- Descrição visivel-->
+                        </div>
+                    </div>
+
+                    <!-- Imagem 3-->
+                    <div class="carousel-item">
+                        <img src="img/natureza3.jpg" alt="Nascer do sol" style="max-height: 500px;">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Natureza 3</h5>
+                            <p>Nascer do sol</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Voltar-->
+                <div>   
+                    <a href="#meu_slideshow" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Anterior</span><!-- sr-only é utilizado para identificar aonde se esta, é util para pessoas com deficiencia-->
+                    </a>
+                </div>
+
+                <!--Avançar-->
+                <a href="#meu_slideshow" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Posterior</span>
+                </a>
+
+            </div>
+        </div>
+        
+        <footer>
+            <script src="../bootstrap/js/jquery.js"></script>
+
+            <!--biblioteca bootstrap.bundle.min.js que possui os materiair para tal componente-->
+            <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+            
+            <!--Script jquery-->
+            <script>
+
+            </script>
+        </footer>
+    </body>
+</html>
