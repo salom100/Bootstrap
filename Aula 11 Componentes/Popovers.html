@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Componentes Popovers</title>
+
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+        <section id="popovers" >
+            <div class="container">
+                <h1>Popovers</h1>
+    
+                <!-- os popover eles se ajustam para estar dentro da pagina
+                se o popover for muito grande ele ficara no melhor local possivel
+                tomar cuidado para nao fazer popovers grandes demais 
+                podem atrapalhar visualmente o site
+                -->
+                <!--TOPO-->
+                <div class="row" >
+                    <button class="btn btn-primary" title="Popover top" data-toggle="popover" data-content="Aqui é o conteudo do
+                 meu popover" data-placement="top">Meu popover</button>
+    
+                <!--Direita-->
+                    <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteudo do
+                 meu popover" data-placement="right">Meu popover</button>
+    
+    
+                <!--Esquerda-->
+    
+                    <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteudo do
+                 meu popover" data-placement="left">Meu popover</button>
+    
+                <!--Baixo-->
+                    <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteudo do
+                 meu popover" data-placement="bottom">Meu popover</button>
+                </div>    
+        </section>
+
+        <footer>
+            <script src="../bootstrap/js/jquery.js"></script>
+            <!--biblioteca bootstrap.bundle.min.js que possui os materiair para tal componente-->
+            <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!--script jquery-->
+            <script>
+                $(function(){
+                    $('[data-toggle="popover"]').popover()
+                });
+            </script>
+
+        </footer>
+    </body>
+</html>

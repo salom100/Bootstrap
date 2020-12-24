@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Componentes Tooltip</title>
+
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+        <section id="popovers" >
+            <div class="container">
+                <h1>Tooltip</h1>
+    
+                <!-- os popover eles se ajustam para estar dentro da pagina
+                se o popover for muito grande ele ficara no melhor local possivel
+                tomar cuidado para nao fazer popovers grandes demais 
+                podem atrapalhar visualmente o site
+                -->
+                
+                <div class="row" >
+                    <!--TOPO-->
+                    <button class="btn btn-success" data-toggle="tooltip" title="tooltip top" 
+                    data-placement="top">Tooltip</button>
+    
+                    <!--Direita-->
+                    <button class="btn btn-success" data-toggle="tooltip" title="tooltip top" 
+                    data-placement="right">Tooltip</button>
+
+                    <!--Esquerda-->
+                    <button class="btn btn-success" data-toggle="tooltip" title="tooltip top" 
+                    data-placement="left">Tooltip</button>
+                    
+                    <!--Baixo-->
+                    <button class="btn btn-success" data-toggle="tooltip" title="tooltip top" 
+                    data-placement="bottom">Tooltip</button>
+                </div>    
+        </section>
+
+        <footer>
+            <script src="../bootstrap/js/jquery.js"></script>
+
+            <!--biblioteca bootstrap.bundle.min.js que possui os materiair para tal componente-->
+            <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+            
+            <!--Script jquery-->
+            <script>
+                $(function(){
+                    //$('[nome do campo="valor inserido nessa campo"]').funcao()
+                    $('[data-toggle="tooltip"]').tooltip()
+                });
+            </script>
+
+        </footer>
+    </body>
+</html>

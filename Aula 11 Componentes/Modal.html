@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Componentes Modal</title>
+
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+            <!--modal é uma caixa extra que comparece quando clicamos em um botao-->
+            <div class="container">
+                <h1>Modal</h1>
+
+                <!--# = significa que o nome é um id-->
+                <button class="btn btn-secondary" data-nome="Ciclano" data-toggle="modal"
+                data-target="#conteudoModal">Mensagem para ciclano</button>
+
+                <button class="btn btn-info" data-nome="Fulano" data-toggle="modal" data-target="#conteudoModal">Mensagem para fulano</button>
+                
+                <button class="btn btn-success" data-nome="Nasa" data-toggle="modal" data-target="#conteudoModal">Mensagem para a Nasa</button>
+            
+                <!--Modal fica oculto ate ser selecionado-->
+                <div id="conteudoModal" class="modal fade">
+                    <!-- tamanhos do modal 
+                        modal-sm = pequeno
+                        modal-lg = grande
+                        modal-xl = extra grande depende da resolução da tela do computador
+                    -->
+                    <div class="modal-dialog modal-lg"> <!-- modal-dialog-centered nessa div que podemos dar um posicionamento para o modal e definir o tamanho da modal-->
+                        <div class="modal-content"> <!--conteudo do modal-->
+                            <div class="modal-header"> <!-- cabeçalho-->
+                                <h4 class="modal-title">Titulo Modal</h4> <!--o nome da class é utilizado para mudar o valor no javascript code-->
+                                <button class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <!--conteudo/ corpo do modal-->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <span>Destinatario:</span>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" name="para" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <span>Mensagem:</span>
+                                    </div>
+                                    <div class="col-8">
+                                        <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <!--rodape-->
+                            <div class="modal-footer">
+                                <button class="btn btn-secundary" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        
+        <footer>
+            <script src="../bootstrap/js/jquery.js"></script>
+
+            <!--biblioteca bootstrap.bundle.min.js que possui os materiair para tal componente-->
+            <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+            
+            <!--Script jquery or javascript-->
+            <script type="text/javascript">
+                $('#conteudoModal').on('show.bs.modal', function(event){ //função realizada no conteudo do modal
+                    var button = $(event.relatedTarget);
+                    var recipient = button.data('nome');//capta o valor que se encontra no data-nome no caso ou sera fulano ou ciclano 
+                    var modal = $(this);
+                    modal.find('.modal-title').text('Mensagem para '+recipient);//muda o titulo do modal
+                    modal.find('.modal-body input').val(recipient);//insere o valor que esta no nome do botao data-nome
+                });
+            </script>
+        </footer>
+    </body>
+</html>

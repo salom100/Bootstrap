@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Componentes Collapse</title>
+
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1>Collapse</h1>
+            <!-- collapse pode ser tanto inserio no a link quanto no button quanto no input
+            para o link <a></a> usamos o href="#idDaDiv"
+            para o button usamos o data-target="#idDaDiv"
+            para o input definimos o type como button ou submit e utilizamos o data-target="#idDaDiv"
+            -->
+            <a class="btn btn-warning" data-toggle="collapse" href="#secreto" >Mostre mais</a>
+
+            <button class="btn btn-info" data-toggle="collapse" data-target="#secreto">Mostre mais</button>
+
+            <input type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#secreto" value="Mostrar mais">
+
+            <div class="collapse" id="secreto"><!-- class collapse esconde a div-->
+                Mensagem secreta.
+            </div>
+        </div>
+        
+        <footer>
+            <script src="../bootstrap/js/jquery.js"></script>
+
+            <!--biblioteca bootstrap.bundle.min.js que possui os materiair para tal componente-->
+            <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+            
+            <!--Script jquery-->
+            <script>
+
+            </script>
+        </footer>
+    </body>
+</html>
