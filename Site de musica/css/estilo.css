@@ -1,0 +1,42 @@
+/* Minha folha de estilo */
+body{
+	background-color: black;
+}
+
+section{
+	/* padding: margem top e bottom / margem right e left*/
+	padding: 100px 0;
+}
+
+footer{
+	padding: 50px;
+}
+
+#secao_1{
+	height: 800px;
+	background-color: black;
+	background-image: url("../img/bg.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#secao_5{
+	height: 680px;
+	padding: 150px;
+	background-image: url('../img/3.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+
+.background_rosa{
+	background-color: #D41AE3;
+}
+
+.sombra{
+	text-shadow: 1px 1px 1px #111;
+}
+
+.borda{
+	border-right: 20px solid #000;
+}
